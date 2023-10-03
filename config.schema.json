@@ -5,11 +5,40 @@
   "schema": {
     "type": "object",
     "properties": {
-      "name": {
-        "title": "Name",
+      "mosquitto": {
+        "title": "Path to mosquitto broker binary",
         "type": "string",
         "required": true,
-        "default": "Example Dynamic Platform"
+        "default": "mosquitto"
+      },
+      "accessories": {
+        "type": "array",
+        "title": "Accessories",
+        "items": {
+          "type": "object",
+          "properties": {
+            "name": {
+              "type": "string",
+              "title": "Name",
+              "required": true,
+              "description": "Name of the accessory"
+            },
+            "type": {
+              "type": "string",
+              "title": "Accessory type",
+              "required": true,
+              "description": "Type of the accessory",
+              "oneOf": [
+                {
+                  "title": "To be filled",
+                  "enum": [
+                    "todo"
+                  ]
+                }
+              ]
+            }
+          }
+        }
       }
     }
   }
