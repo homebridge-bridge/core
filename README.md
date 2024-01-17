@@ -5,9 +5,10 @@ It enables accessories to be controlled via a programming language other than Ty
 
 ## Supported languages
 
-Currently, the following languages are supported with helper classes provided:
+Currently, the following languages are supported natively:
 
 - Python: [`pybridge`](https://github.com/homebridge-bridge/pybridge)
+- Rust: `rustbridge` (planned)
 
 Due to the modular architecture any programming language can be added with ease.
 See "[Adding a language](./docs/how-to.md#adding-support-for-a-programming-language)" for more information.
